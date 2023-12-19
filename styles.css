@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#folderSelect,
+button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#bookmarksList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bookmarksList li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    /* 移除默认背景 */
+    border: 1px solid transparent;
+    /* 移除默认边框 */
+    transition: background-color 0.3s, border 0.3s;
+    /* 平滑过渡效果 */
+}
+
+#bookmarksList li a {
+    color: black;
+    /* 正常颜色 */
+    text-decoration: none;
+    /* 去除下划线 */
+}
+
+#bookmarksList li:hover {
+    background-color: #e2e2e2;
+    /* 鼠标悬停时的背景色 */
+    border: 1px solid #ddd;
+    /* 鼠标悬停时的边框 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 鼠标悬停时的阴影 */
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 书签项布局样式 */
+.bookmark-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* 链接样式 */
+.bookmark-link {
+    flex-grow: 1;
+    /* 让链接占据除了删除按钮外的整个宽度 */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* 去除下划线 */
+    color: black;
+    /* 设置文本颜色 */
+}
+
+/* 显示时间的样式 */
+.bookmark-time {
+    margin-right: 30px;
+}
+
+/* 网站图标样式 */
+.favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+/* 书签标题样式 */
+.bookmark-title {
+    margin-right: 10px;
+}
+
+/* 书签网址样式 */
+.bookmark-url {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 200px;
+    /* 或根据需要调整 */
+    margin-left: auto;
+    /* 推到右边 */
+    text-align: left;
+    /* 文本左对齐 */
+    flex-grow: 1;
+    /* 允许元素增长以填充空间 */
+    color: rgb(100, 100, 100);
+}
+
+
+/* 删除按钮样式 */
+.delete-btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: grey;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* 删除按钮鼠标悬停效果 */
+.delete-btn:hover {
+    background-color: transparent;
+    color: red;
+}
+
+#undoButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* 其他样式：背景色、边框、颜色等 */
+}
