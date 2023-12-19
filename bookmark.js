@@ -151,8 +151,6 @@ function displaySortedBookmarks(bookmarks) {
     });
 }
 
-
-
 // 格式化时间日期
 function formatDate(date) {
     const year = date.getFullYear();
@@ -165,6 +163,7 @@ function formatDate(date) {
 
 let lastDeletedBookmark = null;
 
+// 删除书签
 function deleteBookmark(bookmarkId, liElement) {
     chrome.bookmarks.get(bookmarkId, function (results) {
         lastDeletedBookmark = results[0]; // 保存被删除的书签信息
