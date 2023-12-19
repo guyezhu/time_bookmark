@@ -1,6 +1,6 @@
 {
     "name": "时序书签",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "manifest_version": 3,
     "description": "An extension for sorting bookmarks by the time they were added.",
     "permissions": [
